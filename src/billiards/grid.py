@@ -8,6 +8,7 @@ def laplacian_1d(n, h):
     D = sp.diags([voisine, diagonale, voisine], [-1, 0, 1])
     return (D / h**2).tocsc()
 
+
 def laplacian_rectangle(nx, ny, hx, hy):
     """Matrice (nx*ny x nx*ny) de -laplacien sur un rectangle, psi = 0 au bord.
     Points numérotés ligne par ligne."""
